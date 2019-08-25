@@ -1,3 +1,5 @@
+//budget adapter
+
 var jsonAdapter = require("../handlers/json.js");
 // var pgAdapter = require("../handlers/pg.js");  not implemented yet
 
@@ -8,14 +10,24 @@ var budgetAdapter = function () {
 		var budgetJsonData = source.getBudgetFileContents();
 		var usersJsonData = source.getUserFileContents();
 		var budgetItemsData = source.getBudgetItemFileContents();
+		var budgetAdjustmentsData = source.getBudgetAdjustmentsFileContents();
 	}
 
 	var budgetById = function (id) {
 		if (source === jsonAdapter) {
-			return _.filter(budgetJsonData, {associated_user_id: id});
+			return jsonAdapter.budgetById(id);
 		}
 		else {
 			return pgAdapter.budgetById(id);
+		}
+	}
+
+	var budgetAdjustmentsById = function (id) {
+		if (source === jsonAdapter) {
+
+		}
+		else {
+			return pgAdapter.adjustmentsById(id);
 		}
 	}
 
@@ -23,6 +35,7 @@ var budgetAdapter = function () {
 	return {
 		getById: budgetById,
 		budgetItem: budgetItemById,
+		adjustments: budgetAdjustmentsById,
 		itemList: budgetItemList,
 		overview: monthToDateReport,
 		create: createBudget,

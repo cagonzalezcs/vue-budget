@@ -3,12 +3,17 @@ var fs = require('fs');
 var jsonHandler = function () {
 	var userFileLocation = "../users/users.json";
 	var budgetFileLocation = "../budget/budget.json";
-	var budgetItemsFileLocation = "../budget/budget_items.json"
+	var budgetItemsFileLocation = "../budget/budget_items.json";
+	var budgetAdjustmentFileLocation = "../budget/budget_adjustments.json";
 	var expenseFileLocation = "../expense/expense.json";
 	var incomeFileLocation = "../income/income.json";
 
 	var readJson = function (fileLocation) {
 		return fs.readFileSync(fileLocation);
+	}
+
+	var writeJson = function (fileLocation, data) {
+		fs.writeFileSync(fileLocation, data);
 	}
 
 	var getUserFileContents = function () {
@@ -21,6 +26,10 @@ var jsonHandler = function () {
 
 	var getBudgetItemsFileContents = function () {
 		return readJson(budgetItemsFileLocation);
+	}
+
+	var getBudgetAdjustmentFileContents = function () {
+		return readJson(budgetAdjustmentFileLocation);
 	}
 
 	var getExpenseFileContents = function () {
