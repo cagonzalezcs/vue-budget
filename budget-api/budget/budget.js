@@ -1,7 +1,7 @@
 //budget adapter
 
-var jsonAdapter = require("../handlers/json.js");
-// var pgAdapter = require("../handlers/pg.js");  not implemented yet
+var jsonAdapter = require("../adapters/json.js");
+// var pgAdapter = require("../adapters/pg.js");  not implemented yet
 
 var budgetAdapter = function () {
 	
