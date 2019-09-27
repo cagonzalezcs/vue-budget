@@ -5,9 +5,7 @@ var jsonAdapter = function () {
 	var userData = jsonHandler.getUserFileContents();
 
 	//get budget data by ID
-	var budgetDataById = function (id) {
-		return _.filter(budgetData, {associated_user_id: id});
-	}
+	var budgetDataById = (id) => {return _.filter(budgetData, {associated_user_id: id});}
 
 	//get budget adjustments
 }

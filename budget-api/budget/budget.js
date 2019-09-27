@@ -5,7 +5,7 @@ var jsonAdapter = require("../adapters/json.js");
 
 var budgetAdapter = function () {
 	
-	var source = pgAdapter || jsonAdapter;
+	var { source } = pgAdapter || jsonAdapter;
 	if source === jsonAdapter {
 		var budgetJsonData = source.getBudgetFileContents();
 		var usersJsonData = source.getUserFileContents();
@@ -14,21 +14,11 @@ var budgetAdapter = function () {
 	}
 
 	var budgetById = function (id) {
-		if (source === jsonAdapter) {
-			return jsonAdapter.budgetById(id);
-		}
-		else {
-			return pgAdapter.budgetById(id);
-		}
+		return source.budgetById(id);
 	}
 
 	var budgetAdjustmentsById = function (id) {
-		if (source === jsonAdapter) {
-
-		}
-		else {
-			return pgAdapter.adjustmentsById(id);
-		}
+		return source.adjustmentsById(id);
 	}
 
 	// API CONTRACT
