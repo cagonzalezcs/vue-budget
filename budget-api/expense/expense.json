@@ -1,0 +1,10 @@
+[
+  {
+    "expense_item_id": "3fce3f356f", // Unique
+    "created_date": "Sunday, November 25, 2018 5:03 PM", // Should Probably be a Unix Timestamp
+    "last_modified_date": "Wednesday, September 12, 2018 4:33 PM", // Timestamp on Edit
+    "associated_budget_id": "5d62cf14a0210d6def3b7f84", // Tied to Budget Item, where budget item acts categorically in some sense
+    "item_notes": "Purchase at HEB - Weekly Groceries.",
+    "amount_spent": 62.54
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "budget_item_id": "5d62cf14a0210d6def3b7f84", // Unique
+    "created_date": "Monday, April 14, 2014 2:18 AM", // Should Probably be a Unix Timestamp
+    "last_modified_date": "Wednesday, October 8, 2014 6:13 PM", // Timestamp on Edit
+    "associated_user_id": "5d62cd8c8bba3f2e6b5576d8", // Tied to User ID of Unique User
+    "item_name": "Groceries", // Unique? Not sure, most likely not
+    "budgeted_amount": 1245.5,
+    "associated_expenses": [
+      "3fce3f356f", // Tied to Unique Expense ID
+      "5fde3f3dwG"
+    ]
+  }
+]
