@@ -36,5 +36,32 @@ export default {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px  10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+
+  .budget-overview-box {
+    position: relative;
+    text-align: center;
+    width: 33.33%;
+
+    &:last-child {
+      &:after {
+        display:  none;
+      }
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 5%;
+      right: 0;
+      width: 1px;
+      height: 90%;
+      background-color: #ddd;
+    }
+  }
 }
 </style>

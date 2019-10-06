@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <BudgetOverview />
+    <BudgetList />
   </div>
 </template>
 
 <script>
 import BudgetOverview from './components/BudgetOverview.vue'
+import BudgetList from './components/BudgetList.vue'
 
 export default {
   name: 'app',
   components: {
-    BudgetOverview
+    BudgetOverview,
+    BudgetList
   }
 }
 </script>
