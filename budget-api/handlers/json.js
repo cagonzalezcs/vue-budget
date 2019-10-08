@@ -2,6 +2,7 @@ var fs = require('fs');
 
 // jsonHandler simplifies the process of working with json by
 // abstracting some of the lower level concerns like file loading and saving
+// this allows us to use the json files as a data store without additional overhead
 var jsonHandler = function () {
 	var userFileLocation = "../users/users.json";
 	var budgetFileLocation = "../budget/budget.json";

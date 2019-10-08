@@ -8,4 +8,8 @@ var jsonAdapter = function () {
 	var budgetDataById = (id) => {return _.filter(budgetData, {associated_user_id: id});}
 
 	//get budget adjustments
+	
+	return {
+		budgetById: budgetDataById
+	}
 }

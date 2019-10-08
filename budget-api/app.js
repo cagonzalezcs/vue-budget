@@ -1,6 +1,6 @@
 var express = require('express');
 var path = require('path');
-var cookieParser = require('cookie-parser');
+var cookieParser = require('cookie-parser'); // lets us parse browser cookies
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
