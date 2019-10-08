@@ -6,11 +6,9 @@ var pgAdapter = require("../adapters/pg.js");
 var budgetAdapter = function () {
 	
 	var { source } = pgAdapter || jsonAdapter;
+	var adapter;
 	if source === jsonAdapter {
-		var budgetJsonData = source.getBudgetFileContents();
-		var usersJsonData = source.getUserFileContents();
-		var budgetItemsData = source.getBudgetItemFileContents();
-		var budgetAdjustmentsData = source.getBudgetAdjustmentsFileContents();
+		adapter = source.budget;
 	}
 
 	//gets budget data from the source
@@ -39,7 +37,8 @@ var budgetAdapter = function () {
 	return {
 		getUserBudget: getUserBudget,
 		getById: budgetById,
-		budgetItem: budgetItemById,
+		budgetItem: getBudgetItemById,
+		createBudgetItem: budgetItemCreate,
 		adjustments: budgetAdjustmentsById,
 		itemList: budgetItemList,
 		overview: monthToDateReport,

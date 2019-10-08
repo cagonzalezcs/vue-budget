@@ -9,7 +9,7 @@ necessary functions:
 [X] get a budget for a user
 [X] get budget adjustments for a user
 [X] get a budget item for a budget
-[ ] get a budget overview
+[ ] get a budget overview             //TODO: What is a budget overview?
 [ ] get a filtered budget overview
 
 [ ] add a budget for a user
